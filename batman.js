@@ -3,10 +3,10 @@ class Batman {
     constructor(game) {
         this.game = game;
         
-        this.animator = new Animator(ASSET_MANAGER.getAsset("./theBat.png"), 0, 0,243,430,6,0.15);
+        this.animator = new Animator(ASSET_MANAGER.getAsset("./theBat.png"), 0, 0,243,430,5,0.18);
         this.x = 0;
         this.y = 0;
-        this.speed = 200;
+        this.speed = 145;
     };
 
     update() {
@@ -15,6 +15,6 @@ class Batman {
     };
 
     draw(ctx) {
-        this.animator.drawFrame(this.game.clockTick,ctx,this.x,this.y);
+        this.animator.drawFrame(this.game.clockTick,ctx,this.x,270);
     };
 };
