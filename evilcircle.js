@@ -67,6 +67,22 @@ class EvilCircle {
     }
 
     regenerate() {
+    
+		if (Math.random() * 0.5 < 0.5) {
+			this.positiveX = true;
+		}
+
+		if (Math.random() * 0.5 < 0.5) {
+			this.positiveY = true;
+		}
+
+		if(Math.random() * 0.5 < 0.5) {
+			this.givenX = -100;
+		} else {
+			this.givenX = 1700;
+		}
+        
+        let givenY = Math.floor(Math.random() * (1700 - -150 + 1) + -150);
         this.radius = Math.random()* 100;
     }
 };
